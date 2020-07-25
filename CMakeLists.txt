@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 3.1)
 
 include_directories(
+  .
   ../../bluez-prebuilts/repo/include/bluez-5.50
   ../../bluez-prebuilts/repo/include/bluez-5.50/lib)
 
@@ -13,7 +14,9 @@ message("DBUS_LIBRARIES = ${DBUS_PREBUILT_LIBRARIES}")
 file(GLOB GLIB_PREBUILT_LIBRARIES "../../glib-prebuilts/repo/lib/*.so*")
 message("GLIB_LIBRARIES = ${GLIB_PREBUILT_LIBRARIES}")
 
-add_executable(xbone src/xbone.cpp)
+add_executable(xbone
+  src/xbone.cpp
+  src/controller_manager.cpp)
 
 target_link_libraries(xbone ${BLUEZ_PREBUILT_LIBRARIES})
 target_link_libraries(xbone ${DBUS_PREBUILT_LIBRARIES})
