@@ -1,0 +1,5 @@
+Guide for bluetooth hci protocol flow:
+  http://www.sharetechnote.com/html/Bluetooth_Protocol.html
+
+Example of how to connect/authenticate to hci service
+  https://stackoverflow.com/questions/14820004/bluetooth-pairing-in-c-bluez-on-linux

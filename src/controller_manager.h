@@ -11,6 +11,7 @@ class ControllerManager
 {
 public:
   bool FindPairableDevices(std::vector<std::string> *out_addresses);
+  bool Connect(const std::string& addr);
 };
 
 }  // namespace xbox

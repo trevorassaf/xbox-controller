@@ -3,7 +3,14 @@ cmake_minimum_required(VERSION 3.1)
 include_directories(
   .
   ../../bluez-prebuilts/repo/include/bluez-5.50
-  ../../bluez-prebuilts/repo/include/bluez-5.50/lib)
+  ../../bluez-prebuilts/repo/include/bluez-5.50/lib
+  ../../bluez-prebuilts/repo/src/gdbus
+  ../../glib-prebuilts/repo/include
+  ../../glib-prebuilts/repo/include/glib
+  ../../glib-prebuilts/repo/include/gio
+  ../../glib-prebuilts/repo/include/gmodule
+  ../../glib-prebuilts/repo/include/gobject
+  ../../dbus-prebuilts/repo/include/dbus-1.12.20)
 
 file(GLOB BLUEZ_PREBUILT_LIBRARIES "../../bluez-prebuilts/repo/lib/*.so*")
 message("BLUEZ_LIBRARIES = ${BLUEZ_PREBUILT_LIBRARIES}")

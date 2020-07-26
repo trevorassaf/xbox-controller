@@ -8,6 +8,7 @@
 int main(int argc, char** argv)
 {
   xbox::ControllerManager manager;
+
   std::vector<std::string> addresses;
 
   std::cout << "Searching for pairable XBox controllers..." << std::endl;
@@ -28,6 +29,16 @@ int main(int argc, char** argv)
   {
     std::cout << "XBox Controller Bluetooth Address: "
               <<  addr << std::endl;
+
+    std::cout << "Attempting to pair..." << std::endl;
+    if (!manager.Connect(addr))
+    {
+      std::cerr << "Failed to pair!" << std::endl;
+    }
+    else
+    {
+      std::cout << "Successfully paired!" << std::endl;
+    }
   }
 
   return EXIT_SUCCESS;
